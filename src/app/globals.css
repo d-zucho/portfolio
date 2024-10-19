@@ -79,3 +79,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .main-container {
+    @apply max-w-6xl w-full mx-auto px-4 lg:px-8;
+  }
+}

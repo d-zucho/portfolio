@@ -7,20 +7,25 @@ import MobileNav from './MobileNav'
 
 const Navbar = () => {
   return (
-    <nav className='flex gap-8 items-center text-primary-foreground'>
-      {navLinks.map((navItem, index) => (
-        <Link
-          key={index}
-          href={navItem.href}
-          className='hover:text-primary transition-all duration-700'
-        >
-          {navItem.label}
+    <nav className='text-primary-foreground'>
+      <div className='hidden md:flex gap-8 items-center'>
+        {navLinks.map((navItem, index) => (
+          <Link
+            key={index}
+            href={navItem.href}
+            className='hover:text-primary transition-all duration-700'
+          >
+            {navItem.label}
+          </Link>
+        ))}
+        <Link href='/contact' className={cn(buttonVariants())}>
+          Contact
         </Link>
-      ))}
-      <Link href='/contact' className={cn(buttonVariants())}>
-        Contact
-      </Link>
-      <MobileNav />
+      </div>
+
+      <div className='md:hidden'>
+        <MobileNav />
+      </div>
     </nav>
   )
 }

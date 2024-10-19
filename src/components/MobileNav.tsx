@@ -14,6 +14,7 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { buttonVariants } from './ui/button'
 import Image from 'next/image'
+import { Separator } from './ui/separator'
 
 const MobileNav = () => {
   return (
@@ -35,6 +36,7 @@ const MobileNav = () => {
               height={50}
               className='mx-auto'
             />
+            <Separator className='border-white bg-white opacity-15 shadow-2xl' />
           </SheetHeader>
           <div className='flex flex-col items-center gap-10 mt-20 text-primary-foreground'>
             {navLinks.map((navItem, index) => (
