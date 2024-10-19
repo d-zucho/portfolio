@@ -10,7 +10,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        gradient: 'var(--gradient)',
+      },
       colors: {
+        gradient: 'var(--mygradient)',
         background: 'var(--background)',
         foreground: 'hsl(var(--foreground))',
         card: {

@@ -8,14 +8,23 @@ body {
   font-family: 'Lexend', sans-serif;
 }
 
+.rocksalt {
+  font-family: 'Rock Salt', cursive;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .gradient {
+    @apply bg-gradient-to-r from-red-300 to-[#ff2079cc];
   }
 }
 
 @layer base {
   :root {
+    --gradient: linear-gradient(95deg, #8e2de2 13.59%, #ff2079cc 160.96%);
     --background: #262626;
     --foreground: 224 71.4% 4.1%;
     --card: 0 0% 100%;

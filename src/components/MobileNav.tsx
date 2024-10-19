@@ -23,7 +23,7 @@ const MobileNav = () => {
         <SheetTrigger asChild className='hover:cursor-pointer'>
           <Menu />
         </SheetTrigger>
-        <SheetContent className='h-full w-[25%]'>
+        <SheetContent className=''>
           <SheetHeader>
             <VisuallyHidden.Root>
               <SheetTitle>Danny Libor</SheetTitle>
@@ -45,14 +45,14 @@ const MobileNav = () => {
                 href={navItem.href}
                 className='hover:text-primary transition-all duration-300'
               >
-                {navItem.label}
+                <SheetClose>{navItem.label}</SheetClose>
               </Link>
             ))}
             <Link
               href='/contact'
               className={cn(buttonVariants(), 'w-full bg-primary mt-10')}
             >
-              Contact
+              <SheetClose>Contact</SheetClose>
             </Link>
           </div>
         </SheetContent>
