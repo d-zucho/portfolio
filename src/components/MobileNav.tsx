@@ -43,14 +43,17 @@ const MobileNav = () => {
               <Link
                 key={index}
                 href={navItem.href}
-                className='hover:text-primary transition-all duration-300'
+                className='hover:text-primary transition-all duration-200'
               >
                 <SheetClose>{navItem.label}</SheetClose>
               </Link>
             ))}
             <Link
               href='/contact'
-              className={cn(buttonVariants(), 'w-full bg-primary mt-10')}
+              className={cn(
+                buttonVariants(),
+                'w-full max-w-[300px] bg-primary mt-10'
+              )}
             >
               <SheetClose>Contact</SheetClose>
             </Link>

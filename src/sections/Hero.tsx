@@ -1,14 +1,25 @@
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import Image from 'next/image'
 import React from 'react'
+import HeroBg from '/BGHeroWebDev.svg'
 
 const Hero = () => {
   return (
-    <section className='text-primary-foreground mt-12 w-full h-auto relative z-0'>
-      <MaxWidthWrapper>
-        <div className='flex flex-col flex-nowrap gap-4 lg:flex-row justify-between items-center'>
+    <section className='text-primary-foreground w-full h-auto relative z-0 mt-20'>
+      <MaxWidthWrapper className='relative'>
+        <div className=''>
+          <Image
+            alt='Hero Background'
+            aria-ignore='true'
+            width={800}
+            height={500}
+            src={'/BGHeroWebDev.svg'}
+            className='hidden md:block absolute -top-36 left-24 z-0 md:left-0'
+          />
+        </div>
+        <div className='flex flex-col flex-nowrap gap-8 lg:flex-row justify-between items-center'>
           <div className='copy flex-1'>
-            <div className='w-full'>
+            <div className='w-full lg:max-w-prose'>
               {/* <div className=''> */}
               <h1 className='rocksalt text-center text-[40px]  md:text-[56px] mx-auto lg:mx-0 lg:text-left pl-6 -mb-8 min-w-[370px] flex gap-4 justify-center lg:justify-start'>
                 <span>Danny</span> <span className='text-primary'>Libor</span>

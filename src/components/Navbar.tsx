@@ -13,7 +13,7 @@ const Navbar = () => {
           <Link
             key={index}
             href={navItem.href}
-            className='hover:text-primary transition-all duration-700'
+            className='hover:text-primary transition-all duration-5  500'
           >
             {navItem.label}
           </Link>
